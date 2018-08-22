@@ -88,7 +88,7 @@ app.get('/about', (req, res)=>{
 
 app.get('/project', (req, res)=>{
     res.render('project.hbs', {
-        pageTitle: 'Page'
+        pageTitle: 'Projects'
     })
 })
 
