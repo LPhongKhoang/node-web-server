@@ -4,6 +4,9 @@ const express = require('express');
 
 const hbs = require('hbs');
 
+const port = process.env.PORT || 3000;
+
+
 var app = express(); // a expresss() function is the top-level exported by express module
 
 //Using hbs as the default view engine requires just one line of code in your app setup. 
@@ -36,9 +39,9 @@ app.use((req, res, next)=>{
     next();
 });
 // Midleware 2
-app.use((req, res, next)=>{
-    res.render('maintenace.hbs');
-})
+// app.use((req, res, next)=>{
+//     res.render('maintenace.hbs');
+// })
 
 // set a pre static path for files (.html, .jpg, so on)
 app.use(express.static(__dirname+'/public'));
@@ -82,7 +85,7 @@ app.get('/about', (req, res)=>{
 
 
 // listen request at port 3000, second arg is callback function --> is executed firstly when server is ready
-app.listen(3000, ()=>{
-    console.log("server is up (ready) on port 3000");
+app.listen(port, ()=>{
+    console.log(`server is up (ready) on port ${port}`);
 });
 
