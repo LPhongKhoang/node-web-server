@@ -86,10 +86,16 @@ app.get('/about', (req, res)=>{
     });
 });
 
+app.get('project/', (req, res)=>{
+    res.render('project.hbs', {
+        pageTitle: 'Page'
+    })
+})
+
 
 
 // listen request at port 3000, second arg is callback function --> is executed firstly when server is ready
 app.listen(port, ()=>{
-    console.log(`server is up (ready) on port ${port}`);
+    console.log(`SERVER is up (ready) on port ${port}`);
 });
 
