@@ -62,7 +62,7 @@ app.get('/', (req, res)=>{
 
     res.render('home.hbs', {
         pageTitle : 'Home page _ Long pro',
-        message : 'Welcome to my Pk pro page',
+        message : 'Welcome to LONG PHONG KHOANG',
         
     });
 });
@@ -86,7 +86,7 @@ app.get('/about', (req, res)=>{
     });
 });
 
-app.get('project/', (req, res)=>{
+app.get('/project', (req, res)=>{
     res.render('project.hbs', {
         pageTitle: 'Page'
     })
